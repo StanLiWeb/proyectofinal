@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+:root {
+  --font-family-base: 'Inter', sans-serif;
+  --background-color: linear-gradient(0deg, rgba(0, 212, 255, 1) 0%, rgba(9, 9, 121, 1) 84%, rgba(2, 0, 36, 1) 100%);
+  --input-bg-color: #fff;
+  --input-border-color: #ddd;
+  --container-form: #ffffff;
+  --font-color: #333;
+  --font-size-base: 16px;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+body {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    color: var(--font-color);
+    background: var(--background-color);
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+.auth-container{
+    box-shadow: var(--box-shadow);
+    background: var(--container-form);
+    width: 100%;
+    max-width: 400px;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    
+  }
+.login__box{
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    column-gap: .75rem;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid #c5c5c5;
+  }
+.auth-form{
+    display: grid;
+    grid-gap: 1.5rem;
+    margin: 40px 0px;
+  }
+.login__input{
+    position: relative;
+  }
+.form-title{
+    margin: 10px;
+  }
+.login__icon{
+    margin-left: 10px;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 11px;
+  }
+.icon__eye{
+    top: 11px;
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+.login__input input{
+    width: 100%;
+    border: none;
+    padding:15px 38px;
+    outline: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+.login__input label{
+    position: absolute;
+    left: 0;
+    top: 13px;
+    margin-left: 40px;
+    pointer-events: none;
+    font-size: 15px;
+    color: #858585;
+    transition: 0.3s ease-in-out;
+    transform-origin: left top;
+    background-color: var(--container-form);
+  }
+.login__input input:focus ~ label,
+.login__input input:not(:placeholder-shown) ~ label {
+    transform: translateY(-22px) translateX(-5px) scale(0.9);
+    color: #333;
+    padding: 0 5px;
+}
+  .login__button{
+    padding: 11px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: none;
+    color: #fff;
+    background-color: #000;
+}
+  .login__button:hover{
+    background-color: #1b1b1b;
+    cursor: pointer;
+}
+  .auth-links a{
+    font-size: 15px;
+    text-decoration: none;
+    color: #000;
+}
+  .auth-links a:hover{
+    text-decoration: underline;
+}
